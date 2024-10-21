@@ -1,45 +1,51 @@
-// src/components/Auth/Login.jsx
 import React, { useState } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
+import { useAuth } from '../../context/AuthContext';
 
 const Login = () => {
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState(null);
+  const { login } = useAuth();
+  const navigate = useNavigate();
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Логіка для автентифікації (можете замокати або реалізувати реальний запит)
-        console.log('Username:', username);
-        console.log('Password:', password);
-    };
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    setError(null);
+    try {
+      await login(email, password);
+      navigate('/');
+    } catch (error) {
+      setError(error.message);
+    }
+  };
 
-    return (
-        <div>
-            <h2>Login</h2>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor="username">Username:</label>
-                    <input
-                        type="text"
-                        id="username"
-                        value={username}
-                        onChange={(e) => setUsername(e.target.value)}
-                        required
-                    />
-                </div>
-                <div>
-                    <label htmlFor="password">Password:</label>
-                    <input
-                        type="password"
-                        id="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        required
-                    />
-                </div>
-                <button type="submit">Login</button>
-            </form>
-        </div>
-    );
+  return (
+    <div className="auth-container">
+      <div className="auth-form">
+        <h1>Login</h1>
+        {error && <p className="error-message">{error}</p>}
+        <form onSubmit={handleLogin}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit" className="btn-primary">Login</button>
+        </form>
+        <p>Don't have an account? <Link to="/register" className="btn-link">Register</Link></p>
+      </div>
+    </div>
+  );
 };
 
 export default Login;
