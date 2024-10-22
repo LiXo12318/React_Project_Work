@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
+import ErrorMessage from './ErrorMessage';
+import LoginForm from './LoginForm';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -24,24 +26,14 @@ const Login = () => {
     <div className="auth-container">
       <div className="auth-form">
         <h1>Login</h1>
-        {error && <p className="error-message">{error}</p>}
-        <form onSubmit={handleLogin}>
-          <input
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-          <button type="submit" className="btn-primary">Login</button>
-        </form>
+        <ErrorMessage error={error} />
+        <LoginForm 
+          email={email} 
+          setEmail={setEmail} 
+          password={password} 
+          setPassword={setPassword} 
+          handleLogin={handleLogin} 
+        />
         <p>Don't have an account? <Link to="/register" className="btn-link">Register</Link></p>
       </div>
     </div>
