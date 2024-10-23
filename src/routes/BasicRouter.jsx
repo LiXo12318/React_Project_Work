@@ -3,7 +3,7 @@ import Home from '../pages/HomePage/Home';
 import ToDoPage from '../pages/ToDoPage/ToDoPage';
 import UserPage from '../pages/Users/UserPage';
 import Layout from '../components/Layout/Layout';
-import { Products } from '../pages/ProductPage/Products';
+import Products from '../pages/ProductPage/Products';
 import { NotFoundPage } from '../pages/NotFound/NotFoundPage';
 import Login from '../components/Auth/Login';
 import Register from '../components/Auth/Register';
