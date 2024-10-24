@@ -3,11 +3,11 @@ import Home from '../pages/HomePage/Home';
 import ToDoPage from '../pages/ToDoPage/ToDoPage';
 import UserPage from '../pages/Users/UserPage';
 import Layout from '../components/Layout/Layout';
-import Products from '../pages/ProductPage/Products';
 import { NotFoundPage } from '../pages/NotFound/NotFoundPage';
 import Login from '../components/Auth/Login';
 import Register from '../components/Auth/Register';
 import { useAuth } from '../context/AuthContext';
+import ProductsPage from '../pages/Products/ProductsPage';
 
 const PrivateRoute = ({ element }) => {
   const { user } = useAuth();
@@ -23,7 +23,7 @@ const BasicRouter = () => {
         <Route index element={<Home />} />
         <Route path="todo" element={<ToDoPage />} />
         <Route path="users" element={<UserPage />} />
-        <Route path="products" element={<Products />} />
+        <Route path="products" element={<ProductsPage />} />
       </Route>
       <Route path="*" element={<NotFoundPage />} />
     </Routes>

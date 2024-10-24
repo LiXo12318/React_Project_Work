@@ -11,14 +11,15 @@ const Login = () => {
   const { login } = useAuth();
   const navigate = useNavigate();
 
-  const handleLogin = async (e) => {
+  const handleLogin = (e) => {
     e.preventDefault();
     setError(null);
+
     try {
-      await login(email, password);
+      login(email, password); 
       navigate('/');
-    } catch (error) {
-      setError(error.message);
+    } catch (err) {
+      setError(err.message); 
     }
   };
 
@@ -34,7 +35,10 @@ const Login = () => {
           setPassword={setPassword} 
           handleLogin={handleLogin} 
         />
-        <p>Don't have an account? <Link to="/register" className="btn-link">Register</Link></p>
+        <p>
+          Don't have an account? 
+          <Link to="/register" className="btn-link">Register</Link>
+        </p>
       </div>
     </div>
   );
