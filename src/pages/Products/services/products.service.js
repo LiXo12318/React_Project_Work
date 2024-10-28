@@ -14,4 +14,11 @@ export class ProductsService {
     if (!response.ok) throw new Error(`Failed to fetch product with ID: ${id}`);
     return response.json();
   };
+
+  static async fetchCategories() {
+    const response = await fetch(`${API_URL}/categories`);
+    if (!response.ok) throw new Error("Failed to fetch categories");
+    return response.json();
+  };
+
 }
