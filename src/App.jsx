@@ -1,7 +1,7 @@
 import './App.css';
 import BasicRouter from './routes/BasicRouter';
 import { AuthProvider } from './context/AuthContext';
-import { ProductProvider } from './context/ProductContext'; // Імпортуємо ProductProvider
+import { ProductProvider } from './context/ProductContext'; 
 import { BrowserRouter } from 'react-router-dom';
 
 function App() {
