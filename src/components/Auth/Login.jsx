@@ -17,7 +17,7 @@ const Login = () => {
 
     try {
       login(email, password); 
-      navigate('/');
+      navigate('/products');
     } catch (err) {
       setError(err.message); 
     }

@@ -1,0 +1,30 @@
+/* src/pages/Cart/components/CartItem.css */
+.cart-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+  max-width: 500px; /* Максимальна ширина картки товару */
+  margin: 0 auto; /* Вирівнюємо по центру */
+}
+
+.cart-item-image img {
+  width: 50px; /* Встановлюємо стандартний розмір для картинки */
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.cart-item-info {
+  margin-left: 15px;
+}
+
+.cart-item-info h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.cart-item-info p {
+  margin: 5px 0 0;
+  color: #08f700;
+}

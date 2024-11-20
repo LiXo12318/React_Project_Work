@@ -1,7 +1,8 @@
 import './App.css';
 import BasicRouter from './routes/BasicRouter';
 import { AuthProvider } from './context/AuthContext';
-import { ProductProvider } from './context/ProductContext'; 
+import { ProductProvider } from './context/ProductContext';
+import { CartProvider } from './pages/Carts/context/CartContext'; 
 import { BrowserRouter } from 'react-router-dom';
 
 function App() {
@@ -9,7 +10,9 @@ function App() {
     <BrowserRouter>
       <AuthProvider>
         <ProductProvider>
-          <BasicRouter />
+          <CartProvider>
+            <BasicRouter />
+          </CartProvider>
         </ProductProvider>
       </AuthProvider>
     </BrowserRouter>

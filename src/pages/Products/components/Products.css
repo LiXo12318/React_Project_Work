@@ -159,3 +159,9 @@
   opacity: 0.5;
   cursor: not-allowed;
 }
+.added-message {
+  color: green;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}

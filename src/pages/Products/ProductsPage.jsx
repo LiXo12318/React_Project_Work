@@ -7,7 +7,7 @@ import SortOptions from '../../components/Sorting/SortOptions';
 import FilterOptions from '../../components/Filtering/FilterOptions';
 import useSort from '../Products/hooks/useSort';
 import useFilter from '../Products/hooks/useFilter';
-import usePagination from '../Products/hooks/usePagination'; // Новий хук пагінації
+import usePagination from '../Products/hooks/usePagination';
 import "../Products/components/Products.css";
 
 const ProductsPage = () => {

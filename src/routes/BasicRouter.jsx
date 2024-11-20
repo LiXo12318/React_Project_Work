@@ -8,6 +8,8 @@ import Login from '../components/Auth/Login';
 import Register from '../components/Auth/Register';
 import { useAuth } from '../context/AuthContext';
 import ProductsPage from '../pages/Products/ProductsPage';
+import CartPage from '../pages/Carts/CartPage';
+import OrderPage from '../pages/Orders/OrderPage';
 
 const PrivateRoute = ({ element }) => {
   const { user } = useAuth();
@@ -24,6 +26,8 @@ const BasicRouter = () => {
         <Route path="todo" element={<ToDoPage />} />
         <Route path="users" element={<UserPage />} />
         <Route path="products" element={<ProductsPage />} />
+        <Route path="/order" element={<OrderPage />} />
+        <Route path="cart" element={<CartPage />} />
       </Route>
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
