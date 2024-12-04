@@ -1,4 +1,3 @@
-// src/pages/Orders/OrderForm.jsx
 import React, { useState } from 'react';
 
 const OrderForm = ({ onSubmit }) => {
@@ -17,7 +16,7 @@ const OrderForm = ({ onSubmit }) => {
       email,
     };
 
-    onSubmit(orderData);  // Викликаємо функцію для обробки замовлення
+    onSubmit(orderData);
   };
 
   return (

@@ -1,4 +1,3 @@
-// src/pages/Orders/OrderPage.jsx
 import React, { useContext, useState } from 'react';
 import { CartContext } from '../Carts/context/CartContext';  
 import OrderForm from '../Orders/OrderForm';
@@ -10,8 +9,8 @@ const OrderPage = () => {
 
   // Обробка оформлення замовлення
   const handleOrderSubmit = (orderData) => {
-    console.log('Order submitted:', orderData); // Тут можна додати API запит
-    setOrderConfirmed(true);  // Підтвердження замовлення
+    console.log('Order submitted:', orderData);
+    setOrderConfirmed(true);
   };
 
   return (
