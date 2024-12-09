@@ -1,0 +1,16 @@
+.todo-page {
+    padding: 20px;
+  }
+  
+  .page-title {
+    font-size: 2rem;
+    color: #343a40;
+    margin-bottom: 20px;
+  }
+  
+  .articles-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  

@@ -1,0 +1,95 @@
+/* Загальний фон сторінки */
+.todo-page {
+    background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    min-height: 100vh;
+    padding: 40px 20px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+  }
+  
+  /* Заголовок сторінки */
+  .page-title {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Сітка для статей */
+  .articles-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Оформлення картки статті */
+  .article-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .article-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Заголовок статті */
+  .article-title {
+    font-size: 1.8rem;
+    color: #212529;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  
+  /* Опис статті */
+  .article-description {
+    font-size: 1rem;
+    color: #6c757d;
+    line-height: 1.5;
+  }
+  
+  /* Посилання "Читати більше" */
+  .read-more-link {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+  }
+  
+  .read-more-link:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Адаптація для мобільних пристроїв */
+  @media (max-width: 600px) {
+    .page-title {
+      font-size: 2rem;
+    }
+  
+    .article-card {
+      padding: 15px;
+    }
+  
+    .article-title {
+      font-size: 1.5rem;
+    }
+  
+    .article-description {
+      font-size: 0.9rem;
+    }
+  
+    .read-more-link {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+    }
+  }
+  
