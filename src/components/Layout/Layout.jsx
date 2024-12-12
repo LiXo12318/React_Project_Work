@@ -10,7 +10,7 @@ const Layout = () => {
           <ul>
             <li><Link to="/products">🛒 Products</Link></li>
             <li><Link to="/todo">✅ Blog</Link></li>
-            <li><Link to="/users">👥 AboutUs</Link></li>
+            <li><Link to="/users">👥 Users</Link></li>
             <li><Link to="/cart">🧳 Cart</Link></li>
           </ul>
         </nav>

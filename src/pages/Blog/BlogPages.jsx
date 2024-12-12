@@ -1,7 +1,7 @@
 import React from 'react';
-import ArticleCard from "../ToDoPage/components/ArticleCard";
-import { useArticles } from '../ToDoPage/hooks/useArticles';
-import '../ToDoPage/pages/ToDoPage.css';
+import ArticleCard from "./components/ArticleCard";
+import { useArticles } from './hooks/useArticles';
+import './pages/BlogPage.css';
 
 const ToDoPage = () => {
   const { articles, loading, error } = useArticles();
